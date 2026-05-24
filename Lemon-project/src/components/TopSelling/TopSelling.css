@@ -1,0 +1,123 @@
+.top-selling {
+  padding: var(--section-py) 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(76,175,110,0.04) 50%, transparent 100%);
+}
+
+.top-selling__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.top-selling__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  max-width: 480px;
+  margin: 0.75rem auto 0;
+}
+
+.top-selling__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.top-selling__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: visible;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.top-selling__card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(76,175,110,0.25);
+}
+
+.top-selling__img-wrap {
+  background: var(--bg-subtle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  height: 160px;
+}
+
+.top-selling__img {
+  max-width: 140%;
+  max-height: none;
+  height: 240px;
+  margin-top: -4.5rem;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
+  transition: transform 0.3s ease;
+}
+
+.top-selling__card:hover .top-selling__img {
+  transform: scale(1.08) translateY(-4px);
+}
+
+.top-selling__info {
+  padding: 1rem 1.1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.top-selling__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.top-selling__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-selling__add {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--green-primary);
+  color: #0d1a0f;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.top-selling__add:hover {
+  background: var(--green-light);
+  transform: scale(1.1);
+}
+
+.top-selling__cta {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .top-selling__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .top-selling__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .top-selling__img-wrap {
+    height: 120px;
+  }
+}
