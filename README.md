@@ -70,7 +70,7 @@ git clone https://github.com/PriyankaVerma2307/Lemon-studios-project
 Go to project folder:
 
 ```bash
-cd leom-project
+cd Leom-project
 ```
 
 Install dependencies:
